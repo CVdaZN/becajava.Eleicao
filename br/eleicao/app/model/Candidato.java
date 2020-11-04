@@ -17,12 +17,8 @@ public class Candidato {
 	private String Numero;
 	private String tipo;
 	@ManyToOne
-	@JoinColumn(name = "Candidato.id")
-	private Candidato candidato;
-
-	@ManyToOne
-	@JoinColumn(name = "Eleitor.id")
-	private Eleitor eleitor ;
+	@JoinColumn(name = "Municipio.id")
+	private Municipio municipio;
 
 	public long getId() {
 		return Id;
@@ -48,12 +44,12 @@ public class Candidato {
 		Numero = numero;
 	}
 
-	public Municipio getMunicipio() {
-		return getMunicipio();
+	public municipio getMunicipio() {
+		return municipio;
 	}
 
-	public void setMunicipio(Municipio municipio) {
-		this.Municipio = municipio;
+	public void setMunicipio(municipio municipio) {
+		this.municipio = municipio;
 	}
 
 	public String getNome() {
